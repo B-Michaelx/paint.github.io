@@ -7,8 +7,6 @@ body{
     margin: 0;
     height: 100vh;
     overflow: hidden;
-    width: 100%;
-    max-width: 100%;
 }
 body h1{
    color: #efb810;
