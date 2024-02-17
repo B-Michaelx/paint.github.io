@@ -17,7 +17,7 @@ function crearPaleta() {
         pincel.fillStyle = colores [i];
         pincel.fillRect(xMover, 5,  tamahoCuadrado, tamahoCuadrado); 
         pincel.stroke = "black";
-        pincel.strokeRect(xMover, 5, tamahoCuadrado, tamahoCuadrado);
+        pincel.strokeRect(xMover,5,tamahoCuadrado,tamahoCuadrado);
         xMover = xMover + 30;
 
     }
@@ -27,9 +27,11 @@ function seleccionarColor(evento) {
     let x = evento.pageX-pantalla.offsetLeft; 
     let y = evento.pageY-pantalla.offsetTop;
     
-    if(x < tamahoCuadrado*colores.length+5 && x > 5 && y < tamahoCuadrado+5 && y > 5) {
+    if(x < tamahoCuadrado*colores.length+5 && x > 5
+         && y < tamahoCuadrado+5 && y > 5) {
         for(let i = 0; i < colores.length; i++) {
-            if(x < tamahoCuadrado*(i+1)+5 && x > 5 && y < tamahoCuadrado+5 && y > 5) {
+            if(x < tamahoCuadrado*(i+1)+5 && x > 5 
+            && y < tamahoCuadrado+5 && y > 5) {
                 j = i; 
                 break;
             }
@@ -42,12 +44,13 @@ var puedoDibujar = false;
 function dibujarCirculo(evento) {
     if(puedoDibujar){
         var x, y;
+
         if(evento.type === 'mousemove') {
             x = evento.pageX - pantalla.offsetLeft,
             y = evento.pageY - pantalla.offsetTop;
         } else if(evento.type === 'touchmove'){
-            x = evento.touches[0].clienteX - pantalla.offsetLeft;
-            y = evento.touches[0].clienteY - pantalla.offsetTop;
+            x = evento.touches[0].clientX - pantalla.offsetLeft;
+            y = evento.touches[0].clientY - pantalla.offsetTop;
         }
 
         if (y > tamahoCuadrado + 10) {
