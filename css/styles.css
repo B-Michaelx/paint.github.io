@@ -22,7 +22,7 @@ body {
   }
   .container {
     position: relative;
-    width: 100vw;
+    width: 100vh;
     height: 100vh;
     background-color: #f4f4f4;
     overflow: hidden;
