@@ -1,10 +1,16 @@
-*{
-    padding: 0%;
-    margin: 0%;
-    overflow: hidden;
-}
-body{
-    background: linear-gradient(to right,#f8ffb8 20%,#f4ff91d1 50%,#e4fff9);
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+  }
+  body h1{
+    color: #efb810;
+ }
+ body p {
+     color: #0000FF;
+ }
+  .esto{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,10 +18,81 @@ body{
     margin: 0;
     height: 100vh;
     overflow: hidden;
-}
-body h1{
-   color: #efb810;
-}
-body p {
-    color: #0000FF;
-}
+    z-index: 1;
+  }
+  .container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  .shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  
+  .circle {
+    width: 15px;
+    height: 15px;
+    top: 300px;
+    left: 300px;
+    background-color: yellow;
+    animation-name: scale;
+    transform-origin: center;
+  }
+  
+  .square {
+    width: 20px;
+    height: 20px;
+    border-radius: 0%;
+    background-color: #F87171;
+    animation: rotate 3s linear infinite;
+  }
+  
+  .triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 20px 10px;
+    border-color: transparent transparent #A78BFA transparent;
+    animation: appear 3s linear infinite;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes scale {
+    0%, 100% {
+      transform: scale(0.5);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+  }
+  
+  @keyframes appear {
+    0% {
+      opacity: 0;
+      transform: translateX(0);
+    }
+    50% {
+      opacity: 1;
+      transform: translateX(20px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(60px);
+    }
+  } 
+  
