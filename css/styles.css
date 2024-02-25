@@ -9,7 +9,7 @@ body {
  body p {
      color: #0000FF;
  }
-  .esto{
+  .canv{
     position: relative;
     display: flex;
     flex-direction: column;
