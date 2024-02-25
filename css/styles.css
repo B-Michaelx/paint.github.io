@@ -23,7 +23,7 @@ body {
   .container {
     position: relative;
     width: 100vw;
-    height: 740px;
+    height: 100vh;
     background-color: #f4f4f4;
     overflow: hidden;
     margin: 0%;
