@@ -46,7 +46,7 @@ function dibujarCirculo(evento) {
         var x, y;
 
         if(evento.type === 'mousemove') {
-            x = evento.pageX - pantalla.offsetLeft,
+            x = evento.pageX - pantalla.offsetLeft;
             y = evento.pageY - pantalla.offsetTop;
         } else if(evento.type === 'touchmove'){
             x = evento.touches[0].clientX - pantalla.offsetLeft;
@@ -81,6 +81,11 @@ pantalla.addEventListener('touchend', deshabilitarDibujar);
 
 pantalla.onclick = seleccionarColor;
 
+pantalla.addEventListener("mousedown", () =>
+{
+  puedoDibujar = true;
+  pantalla.style.cursor = "url('../recursos/lapiz.png')0 20, auto";
+});
 
 /*
 // Selecciona los elementos de la animación

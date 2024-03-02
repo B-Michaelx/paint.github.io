@@ -2,12 +2,17 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f2f2f2;
+  
   }
   body h1{
     color: #efb810;
  }
  body p {
      color: #0000FF;
+ }
+
+ p{
+  text-align: center;
  }
   .canv{
     position: relative;
@@ -43,7 +48,7 @@ body {
     height: 15px;
     top: 300px;
     left: 300px;
-    background-color: yellow;
+    background-color: rgb(63, 237, 253);
     animation-name: scale;
     transform-origin: center;
   }
@@ -52,7 +57,7 @@ body {
     width: 20px;
     height: 20px;
     border-radius: 0%;
-    background-color: #F87171;
+    background-color: #2dd304;
     animation: rotate 3s linear infinite;
   }
   
@@ -61,7 +66,7 @@ body {
     height: 0;
     border-style: solid;
     border-width: 0 10px 20px 10px;
-    border-color: transparent transparent #A78BFA transparent;
+    border-color: transparent transparent #ede217 transparent;
     animation: appear 3s linear infinite;
   }
   
